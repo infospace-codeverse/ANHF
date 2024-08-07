@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 
 @Component({
   selector: 'app-portal',
   standalone: true,
-  imports: [],
-  template: `
-    <div>
-      <h1>Welcome to the Portal</h1>
-      <!-- Add the portal functionalities here -->
-    </div>
-  `,
+  imports: [SideNavComponent],
+  template: ` <app-side-nav></app-side-nav> `,
   styleUrl: './portal.component.css',
 })
 export class PortalComponent {}

@@ -1,73 +1,53 @@
+// import { Component } from '@angular/core';
+
+// import { Auth } from '@angular/fire/auth';
+
+// @Component({
+//   selector: 'app-login',
+//   standalone: true,
+//   imports: [],
+//   template: ` <div class="login-form-flex"></div> `,
+//   styleUrls: ['./login.component.css'],
+// })
+// export class LoginComponent {
+//   private auth = inject(Auth);
+// }
+
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Store } from '@ngrx/store';
-import { login } from '../auth/auth.actions';
-import {
-  MatCardModule,
-  MatCardTitle,
-  MatCardContent,
-  MatCardActions,
-} from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatCardTitle,
-    MatCardContent,
-    MatCardActions,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, FormsModule],
   template: `
-    <div class="login-form-flex">
-      <mat-card>
-        <mat-card-title> Login </mat-card-title>
-        <mat-card-content>
-          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-            <mat-form-field>
-              <input matInput placeholder="User Name" formControlName="email" />
-            </mat-form-field>
-            <br />
-            <mat-form-field>
-              <input
-                type="password"
-                matInput
-                placeholder="Password"
-                formControlName="password"
-              />
-            </mat-form-field>
-            <br />
-            <button mat-raised-button color="primary" type="submit">
-              Login
-            </button>
-          </form>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+      <input type="email" name="email" ngModel placeholder="Email" required />
+      <input
+        type="password"
+        name="password"
+        ngModel
+        placeholder="Password"
+        required
+      />
+      <button type="submit">Login</button>
+    </form>
   `,
-  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  loginForm: FormGroup;
+  constructor(private authService: AuthService, private router: Router) {}
 
-  constructor(private fb: FormBuilder, private store: Store) {
-    this.loginForm = this.fb.group({
-      email: [''],
-      password: [''],
-    });
-  }
-
-  onLogin() {
-    const { email, password } = this.loginForm.value;
-    this.store.dispatch(login({ email, password }));
+  onSubmit(form: any) {
+    const { email, password } = form.value;
+    this.authService
+      .signIn(email, password)
+      .then(() => {
+        console.log('User signed in');
+        this.router.navigate(['portal']);
+      })
+      .catch((error) => console.error('Error signing in', error));
   }
 }
