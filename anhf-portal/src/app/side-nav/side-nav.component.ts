@@ -1,14 +1,49 @@
 import { Component } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
-  imports: [MatSidenavModule, MatListModule, MatButtonModule, RouterModule],
+  imports: [
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    RouterModule,
+  ],
   template: `
+    <mat-toolbar class="mat-toolbar">
+      <button
+        (click)="drawer.toggle()"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
     <mat-drawer-container class="example-container" autosize>
       <mat-drawer #drawer class="example-sidenav" mode="side" opened>
         <mat-nav-list>
@@ -44,27 +79,36 @@ import { RouterModule } from '@angular/router';
           >
         </mat-nav-list>
       </mat-drawer>
-      <mat-drawer-content>
-        <button type="button" mat-button (click)="drawer.toggle()">
-          Toggle sidenav
-        </button>
+      <mat-drawer-content class="example-sidenav-content">
         <router-outlet></router-outlet>
       </mat-drawer-content>
     </mat-drawer-container>
   `,
   styles: [
     `
+      .mat-toolbar {
+        background-color: #edece6;
+      }
+      .example-spacer {
+        flex: 1 1 auto;
+      }
       .example-container {
-        height: 100%;
+        height: calc(100% - 65px);
+        background-color: #edece6;
         // border: 1px solid;
       }
       .example-sidenav {
         width: 250px;
-        border: 1px solid;
+        background-color: #edece6;
+        // border: 1px solid;
       }
       .example-sidenav-content {
-        padding: 20px;
+        height: calc(100% - 100px);
+        margin: 20px;
+        padding: 30px;
         border: 1px solid;
+        border-radius: 10px;
+        background-color: white;
       }
     `,
   ],

@@ -1,0 +1,32 @@
+/* wrapper.component.css */
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  margin-top: 20px;
+}
+
+.menu-item {
+  margin: 0 10px;
+  font-size: large;
+}
+
+.admin-icon-container {
+  flex: 1;
+  display: flex;
+  /* justify-content: flex-end; */
+}
+
+.example-icon {
+    margin-right: 8px;
+  }
+
+@media (max-width: 600px) {
+  .menu-item {
+    display: none;
+  }
+}

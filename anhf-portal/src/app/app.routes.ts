@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+import { WrapperComponent } from './wrapper/wrapper.component'; // Import the wrapper component
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FoundationComponent } from './foundation/foundation.component';
@@ -20,14 +21,20 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 // import { IndividualBeneficiaryComponent } from './individual-beneficiary/individual-beneficiary.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutUsComponent },
-  { path: 'foundation', component: FoundationComponent },
-  { path: 'news', component: NewsComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'not-found', component: ErrorPageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'errorPage', component: ErrorPageComponent },
+  {
+    path: '',
+    component: WrapperComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: AboutUsComponent },
+      { path: 'foundation', component: FoundationComponent },
+      { path: 'news', component: NewsComponent },
+      { path: 'contact', component: ContactComponent },
+    ],
+  },
   {
     path: 'portal',
     component: PortalComponent,
@@ -41,5 +48,9 @@ export const routes: Routes = [
       { path: 'beneficiaries', component: GroupBeneficiaryComponent },
     ],
   },
-  { path: '**', redirectTo: 'errorPage' } /** Add 404 page */,
+  {
+    path: '**',
+    redirectTo: 'not-found',
+    pathMatch: 'full',
+  } /** Add 404 page */,
 ];

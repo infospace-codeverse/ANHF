@@ -9,13 +9,13 @@ import { User } from '@angular/fire/auth';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
-    <div *ngIf="user; else notLoggedIn">
+    <!-- <div *ngIf="user; else notLoggedIn">
       <p>Welcome, {{ user.email }}</p>
       <button (click)="signOut()">Sign Out</button>
     </div>
     <ng-template #notLoggedIn>
       <a routerLink="/login">Login</a>
-    </ng-template>
+    </ng-template> -->
     <router-outlet></router-outlet>
   `
 })
