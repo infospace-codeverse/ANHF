@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Store } from '@ngrx/store';
+import { login } from '../auth/auth.actions';
 import {
   MatCardModule,
   MatCardTitle,
@@ -58,7 +59,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private auth: Auth) {
+  constructor(private fb: FormBuilder, private store: Store) {
     this.loginForm = this.fb.group({
       email: [''],
       password: [''],
@@ -67,14 +68,6 @@ export class LoginComponent {
 
   onLogin() {
     const { email, password } = this.loginForm.value;
-    signInWithEmailAndPassword(this.auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log('Login successful:', user);
-      })
-      .catch((error) => {
-        console.error('Login error:', error);
-      });
+    this.store.dispatch(login({ email, password }));
   }
 }
