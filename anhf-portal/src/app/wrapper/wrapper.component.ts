@@ -10,15 +10,23 @@ import { RouterModule } from '@angular/router';
   imports: [MatToolbarModule, MatButtonModule, MatIconModule, RouterModule],
   template: `
     <mat-toolbar class="nav-bar">
-      <div>
+      <div routerLink="">
         <img src="../../assets/logo.png" alt="Logo" class="logo" />
       </div>
-      <div class="">
+      <div class="text">
         <!-- <a mat-button class="menu-item" routerLink="/home">Home</a> -->
-        <a mat-button class="menu-item" routerLink="/about">About</a>
-        <a mat-button class="menu-item" routerLink="/foundation">Foundation</a>
-        <a mat-button class="menu-item" routerLink="/news">News</a>
-        <a mat-button class="menu-item" routerLink="/contact">Contact</a>
+        <a mat-button class="menu-item" routerLink="/about"
+          ><h6 class="text">About</h6></a
+        >
+        <a mat-button class="menu-item" routerLink="/foundation"
+          ><h6 class="text">foundation</h6></a
+        >
+        <a mat-button class="menu-item" routerLink="/news"
+          ><h6 class="text">News</h6></a
+        >
+        <a mat-button class="menu-item" routerLink="/contact"
+          ><h6 class="text">Contact</h6></a
+        >
       </div>
       <div>
         <button
@@ -27,9 +35,10 @@ import { RouterModule } from '@angular/router';
           aria-label="Example icon-button with admin settings icon"
           routerLink="portal/dashboard"
         >
-          <mat-icon>admin_panel_settings</mat-icon>
+          <a mat-button class="menu-item" routerLink="portal/dashboard"
+            ><h6 class="text" style="color:white">Portal</h6></a
+          >
         </button>
-        <a mat-button class="menu-item" routerLink="portal/dashboard">Portal</a>
       </div>
     </mat-toolbar>
 
