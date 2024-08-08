@@ -24,18 +24,46 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
-      <input type="email" name="email" ngModel placeholder="Email" required />
-      <input
-        type="password"
-        name="password"
-        ngModel
-        placeholder="Password"
-        required
-      />
-      <button type="submit">Login</button>
-    </form>
+    <div id="container">
+      <div id="left">
+        <!-- <p id="lorem">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+          Vivamus sodales eros non arcu pellentesque convallis.<br />
+          Nunc dignissim lectus in malesuada porta.<br />
+          Proin ac erat sed urna congue suscipit.<br />
+          Morbi aliquet eget nisl id ornare.
+        </p> -->
+      </div>
+      <div id="right">
+        <h1 id="login">LogIn</h1>
+        <br />
+        <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="client-info"
+            ngModel
+            placeholder="Email"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="client-info"
+            ngModel
+            placeholder="Password"
+            required
+          />
+          <label for="password">Password</label>
+          <input type="submit" id="submit" class="client-info" value="Submit" />
+        </form>
+      </div>
+    </div>
   `,
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
