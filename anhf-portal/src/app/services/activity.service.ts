@@ -14,7 +14,7 @@ export interface Activity {
   id?: string;
   name: string;
   description: string;
-  date: { seconds: number; nanoseconds: number } | Date | string;
+  date: { seconds: number; nanoseconds: number } | Date | any;
   attendees: string[];
 }
 

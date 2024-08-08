@@ -1,0 +1,32 @@
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .activity-card {
+    width: 100%;
+    flex: auto;
+  }
+  
+  .activity-date {
+    font-size: smaller;
+  }
+  
+  .activity-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .attendee-list {
+    padding-left: 20px; /* Adjust padding as needed */
+    list-style-type: disc; /* You can change this to circle, square, etc. */
+    margin: 0;
+  }
+  
+  .attendee-list li {
+    margin-bottom: 5px; /* Adjust margin between items as needed */
+  }
+  
