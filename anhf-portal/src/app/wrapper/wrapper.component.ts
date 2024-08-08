@@ -25,9 +25,9 @@ import { TheFooterComponent } from '../the-footer/the-footer.component';
         <a mat-button class="menu-item" routerLink="/about"
           ><h6 class="text">About</h6></a
         >
-        <a mat-button class="menu-item" routerLink="/foundation"
+        <!-- <a mat-button class="menu-item" routerLink="/foundation"
           ><h6 class="text">foundation</h6></a
-        >
+        > -->
         <a mat-button class="menu-item" routerLink="/news"
           ><h6 class="text">News</h6></a
         >

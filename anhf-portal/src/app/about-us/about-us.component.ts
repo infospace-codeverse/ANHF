@@ -33,6 +33,7 @@ import { Component } from '@angular/core';
         </h1>
       </div>
     </div>
+    
   `,
   styleUrl: './about-us.component.css',
 })
