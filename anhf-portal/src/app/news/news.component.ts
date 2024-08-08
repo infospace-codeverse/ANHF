@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="hero-content">
         <h1>News</h1>
-        <p>
+        <!-- <p>
           At Alfayo Nelson Hope Foundation, our impactful programs have been
           well received by the community, with many embracing the opportunities
           we offer for growth and support. Our initiatives aim to create
@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
           activities and achievements as we continue to work towards a brighter
           future for our Community. Stay informed about our latest developments
           and stories of hope by exploring the links below.
-        </p>
+        </p> -->
       </div>
     </div>
     <section id="news">
