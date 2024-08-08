@@ -72,10 +72,7 @@ import { RouterModule } from '@angular/router';
             routerLinkActive="active"
             >Beneficiaries</a
           >
-          <a
-            mat-list-item
-            routerLink="/portal/groups"
-            routerLinkActive="active"
+          <a mat-list-item routerLink="/portal/groups" routerLinkActive="active"
             >Group Beneficiaries</a
           >
         </mat-nav-list>
@@ -96,12 +93,10 @@ import { RouterModule } from '@angular/router';
       .example-container {
         height: calc(100% - 65px);
         background-color: #edece6;
-        // border: 1px solid;
       }
       .example-sidenav {
         width: 250px;
         background-color: #edece6;
-        // border: 1px solid;
       }
       .example-sidenav-content {
         height: calc(100% - 100px);

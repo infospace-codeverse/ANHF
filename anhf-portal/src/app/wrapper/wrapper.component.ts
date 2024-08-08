@@ -3,11 +3,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
+import { TheFooterComponent } from '../the-footer/the-footer.component';
 
 @Component({
   selector: 'app-wrapper',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, RouterModule],
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    RouterModule,
+    TheFooterComponent,
+  ],
   template: `
     <mat-toolbar class="nav-bar">
       <div routerLink="">
@@ -43,6 +50,7 @@ import { RouterModule } from '@angular/router';
     </mat-toolbar>
 
     <router-outlet></router-outlet>
+    <app-the-footer></app-the-footer>
   `,
   styleUrls: ['./wrapper.component.css'],
 })
