@@ -2,12 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MembersService, Member } from '../services/members.service';
+import { EditMemberComponent } from '../edit-member/edit-member.component';
 
 @Component({
   selector: 'app-member-list',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatPaginator, MatPaginatorModule],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatPaginator,
+  ],
   template: `
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="members" class="mat-table">
@@ -29,6 +39,14 @@ import { MembersService, Member } from '../services/members.service';
           <td mat-cell *matCellDef="let member">{{ member.phoneNumber }}</td>
         </ng-container>
 
+        <!-- Edit Column -->
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef>Edit</th>
+          <td mat-cell *matCellDef="let member">
+            <button mat-button (click)="openEditDialog(member)">Edit</button>
+          </td>
+        </ng-container>
+
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
@@ -40,17 +58,36 @@ import { MembersService, Member } from '../services/members.service';
       </mat-paginator>
     </div>
   `,
-  styleUrls: ['./member-list.component.css'], // Fix styleUrl to styleUrls
+  styleUrls: ['./member-list.component.css'],
 })
 export class MemberListComponent implements OnInit {
   members: Member[] = [];
-  displayedColumns: string[] = ['email', 'name', 'phoneNumber'];
+  displayedColumns: string[] = ['email', 'name', 'phoneNumber', 'edit'];
 
-  constructor(private membersService: MembersService) {}
+  constructor(
+    private membersService: MembersService,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.membersService.getMembers().subscribe((data) => {
       this.members = data;
+    });
+  }
+
+  openEditDialog(member: Member): void {
+    const dialogRef = this.dialog.open(EditMemberComponent, {
+      width: '400px',
+      data: member,
+    });
+
+    dialogRef.afterClosed().subscribe((updatedMember) => {
+      if (updatedMember) {
+        const index = this.members.findIndex((m) => m.id === updatedMember.id);
+        if (index !== -1) {
+          this.members[index] = updatedMember;
+        }
+      }
     });
   }
 }

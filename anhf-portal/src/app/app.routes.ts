@@ -13,7 +13,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { AuthGuard } from './auth/auth.guard';
 
 import { ActivityComponent } from './activity/activity.component';
-import { AddMemberComponent } from './add-member/add-member.component';
+import { MemberComponent } from './member/member.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
@@ -39,7 +39,7 @@ export const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'activities', component: ActivityComponent },
-      { path: 'members', component: AddMemberComponent },
+      { path: 'members', component: MemberComponent },
     ],
   },
   {

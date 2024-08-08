@@ -58,7 +58,7 @@ import { MembersService, Member } from '../services/members.service';
           <mat-select formControlName="attendees" multiple>
             <mat-option
               *ngFor="let member of memberList"
-              [value]="member.email"
+              [value]="member.name"
               >{{ member.name }}</mat-option
             >
           </mat-select>

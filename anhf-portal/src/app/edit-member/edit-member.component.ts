@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   ReactiveFormsModule,
@@ -9,11 +9,11 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MembersService, Member } from '../services/members.service';
 
 @Component({
-  selector: 'app-add-member',
+  selector: 'app-edit-member',
   standalone: true,
   imports: [
     CommonModule,
@@ -23,7 +23,7 @@ import { MembersService, Member } from '../services/members.service';
     MatButtonModule,
   ],
   template: `
-    <h5 mat-dialog-title class="header">Add New Member</h5>
+    <h5 mat-dialog-title class="header">Edit Member</h5>
     <div mat-dialog-content class="form">
       <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline">
@@ -44,26 +44,27 @@ import { MembersService, Member } from '../services/members.service';
         <div mat-dialog-actions class="dialog-footer">
           <button mat-button type="button" (click)="onCancel()">Cancel</button>
           <button mat-button type="submit" [disabled]="memberForm.invalid">
-            Add Member
+            Save Changes
           </button>
         </div>
       </form>
     </div>
   `,
-  styleUrls: ['./add-member.component.css'],
+  styleUrls: ['./edit-member.component.css'],
 })
-export class AddMemberComponent implements OnInit {
+export class EditMemberComponent implements OnInit {
   memberForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private membersService: MembersService,
-    private dialogRef: MatDialogRef<AddMemberComponent>
+    private dialogRef: MatDialogRef<EditMemberComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Member
   ) {
     this.memberForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', Validators.required],
+      name: [data.name, Validators.required],
+      email: [data.email, [Validators.required, Validators.email]],
+      phoneNumber: [data.phoneNumber, Validators.required],
     });
   }
 
@@ -71,19 +72,16 @@ export class AddMemberComponent implements OnInit {
 
   onSubmit() {
     if (this.memberForm.valid) {
-      const formValue = this.memberForm.value;
-      const member: Member = {
-        ...formValue,
+      const updatedMember: Member = {
+        ...this.data,
+        ...this.memberForm.value,
       };
-      this.membersService
-        .addMember(member)
-        .then(() => {
-          console.log('Member added successfully');
-          this.dialogRef.close();
-        })
-        .catch((error) => {
-          console.error('Error adding member: ', error);
-        });
+      this.membersService.updateMember(updatedMember).then(() => {
+        console.log('Member updated successfully');
+        this.dialogRef.close(updatedMember);
+      }).catch(error => {
+        console.error('Error updating member: ', error);
+      });
     }
   }
 

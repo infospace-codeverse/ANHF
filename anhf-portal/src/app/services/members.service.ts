@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, doc, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { addDoc, CollectionReference } from 'firebase/firestore';
+import { addDoc, CollectionReference, DocumentReference } from 'firebase/firestore';
 
 export interface Member {
   id?: string;
@@ -28,5 +28,10 @@ export class MembersService {
 
   addMember(member: Member) {
     return addDoc(this.memberCollection, member);
+  }
+
+  updateMember(member: Member): Promise<void> {
+    const memberDocRef: DocumentReference = doc(this.firestore, `Members/${member.id}`);
+    return updateDoc(memberDocRef, { ...member });
   }
 }

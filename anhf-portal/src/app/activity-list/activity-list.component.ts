@@ -29,9 +29,9 @@ import { EditActivityComponent } from '../edit-activity/edit-activity.component'
         <mat-card-content>
           <p>{{ activity.description }}</p>
           <p><strong>Attendees:</strong></p>
-          <ul class="attendee-list">
+          <ol class="attendee-list">
             <li *ngFor="let attendee of activity.attendees">{{ attendee }}</li>
-          </ul>
+          </ol>
         </mat-card-content>
         <mat-card-actions>
           <button mat-button (click)="openEditDialog(activity)">Edit</button>

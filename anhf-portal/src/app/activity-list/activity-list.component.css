@@ -22,7 +22,7 @@
   
   .attendee-list {
     padding-left: 20px; /* Adjust padding as needed */
-    list-style-type: disc; /* You can change this to circle, square, etc. */
+    list-style-type: decimal; /* You can change this to circle, square, etc. */
     margin: 0;
   }
   

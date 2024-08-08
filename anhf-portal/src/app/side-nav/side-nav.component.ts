@@ -29,19 +29,20 @@ import { RouterModule } from '@angular/router';
       </button>
       <span>My App</span>
       <span class="example-spacer"></span>
-      <button
+      <!-- <button
         mat-icon-button
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon>favorite</mat-icon>
-      </button>
+        <mat-icon>home</mat-icon>
+      </button> -->
       <button
+        routerLink="/home"
         mat-icon-button
         class="example-icon"
         aria-label="Example icon-button with share icon"
       >
-        <mat-icon>share</mat-icon>
+        <mat-icon>home</mat-icon>
       </button>
     </mat-toolbar>
     <mat-drawer-container class="example-container" autosize>

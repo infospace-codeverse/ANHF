@@ -9,8 +9,10 @@ import { ActivityListComponent } from '../activity-list/activity-list.component'
   standalone: true,
   imports: [MatButtonModule, MatDialogModule, ActivityListComponent],
   template: `
-    <h1>Activities</h1>
-    <button mat-button (click)="openDialog()">New activity</button>
+    <div class="header">
+      <h5>Activities</h5>
+      <button mat-button (click)="openDialog()">New activity</button>
+    </div>
     <app-activity-list></app-activity-list>
   `,
   styleUrls: ['./activity.component.css'],
