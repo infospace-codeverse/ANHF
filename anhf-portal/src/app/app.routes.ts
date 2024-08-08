@@ -13,12 +13,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { AuthGuard } from './auth/auth.guard';
 
 import { ActivityComponent } from './activity/activity.component';
-import { AttendanceComponent } from './attendance/attendance.component';
 import { AddMemberComponent } from './add-member/add-member.component';
-import { GroupBeneficiaryComponent } from './group-beneficiary/group-beneficiary.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-// import { GroupLeaderComponent } from './group-leader/group-leader.component';
-// import { IndividualBeneficiaryComponent } from './individual-beneficiary/individual-beneficiary.component';
 
 export const routes: Routes = [
   { path: 'not-found', component: ErrorPageComponent },
@@ -43,9 +39,7 @@ export const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'activities', component: ActivityComponent },
-      { path: 'attendance', component: AttendanceComponent },
       { path: 'members', component: AddMemberComponent },
-      { path: 'beneficiaries', component: GroupBeneficiaryComponent },
     ],
   },
   {
