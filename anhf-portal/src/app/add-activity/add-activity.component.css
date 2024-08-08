@@ -1,0 +1,23 @@
+/* AddActivityComponent Styles */
+.header {
+  padding: 40px;
+}
+.form {
+  padding: 40px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #6200ea;
+  color: white;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ddd;
+  color: #aaa;
+}
+
+/* Adjust the height of the mat-dialog-content to fit its content */
+::ng-deep .mat-dialog-container {
+  overflow: visible;
+}
