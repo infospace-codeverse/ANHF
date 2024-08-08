@@ -66,6 +66,18 @@ import { RouterModule } from '@angular/router';
             routerLinkActive="active"
             >Members</a
           >
+          <a
+            mat-list-item
+            routerLink="/portal/beneficiaries"
+            routerLinkActive="active"
+            >Beneficiaries</a
+          >
+          <a
+            mat-list-item
+            routerLink="/portal/groups"
+            routerLinkActive="active"
+            >Group Beneficiaries</a
+          >
         </mat-nav-list>
       </mat-drawer>
       <mat-drawer-content class="example-sidenav-content">

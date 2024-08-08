@@ -1,16 +1,3 @@
-// import { Component } from '@angular/core';
-// import { MemberListComponent } from '../member-list/member-list.component';
-
-// @Component({
-//   selector: 'app-member',
-//   standalone: true,
-//   imports: [MemberListComponent],
-//   template: ` <app-member-list></app-member-list> `,
-//   styleUrl: './member.component.css',
-// })
-// export class MemberComponent {}
-
-
 import { Component } from '@angular/core';
 import { MemberListComponent } from '../member-list/member-list.component';
 import { CommonModule } from '@angular/common';

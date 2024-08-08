@@ -15,6 +15,8 @@ import { AuthGuard } from './auth/auth.guard';
 import { ActivityComponent } from './activity/activity.component';
 import { MemberComponent } from './member/member.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { GroupComponent } from './group/group.component';
+import { BeneficiaryComponent } from './beneficiary/beneficiary.component';
 
 export const routes: Routes = [
   { path: 'not-found', component: ErrorPageComponent },
@@ -40,6 +42,8 @@ export const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'activities', component: ActivityComponent },
       { path: 'members', component: MemberComponent },
+      { path: 'beneficiaries', component: BeneficiaryComponent },
+      { path: 'groups', component: GroupComponent },
     ],
   },
   {
