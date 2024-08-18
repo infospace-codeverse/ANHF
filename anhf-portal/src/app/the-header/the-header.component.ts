@@ -2,28 +2,44 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TheFooterComponent } from '../the-footer/the-footer.component';
-import { TheHeaderComponent } from '../the-header/the-header.component';
 
 @Component({
-  selector: 'app-wrapper',
+  selector: 'app-the-header',
   standalone: true,
   imports: [
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     RouterModule,
-    TheFooterComponent,
-    TheHeaderComponent,
+    CommonModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   template: `
-    <!-- <mat-toolbar class="nav-bar">
+    <mat-toolbar class="nav-bar">
+      <span class="open-icon" (click)="openNav()">&#9776;</span>
+      <div id="myNav" class="overlay" [ngStyle]="{ width: overlayWidth }">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
       <div routerLink="">
         <img src="../../assets/logo.png" alt="Logo" class="logo" />
       </div>
       <div class="text">
-        <a mat-button class="menu-item" routerLink="/home">Home</a> 
+        <a mat-button class="menu-item" routerLink="/home">Home</a>
         <a mat-button class="menu-item" routerLink="/about"
           ><h6 class="text">About</h6></a
         >
@@ -49,11 +65,18 @@ import { TheHeaderComponent } from '../the-header/the-header.component';
           >
         </button>
       </div>
-    </mat-toolbar> -->
-    <app-the-header></app-the-header>
-    <router-outlet></router-outlet>
-    <app-the-footer></app-the-footer>
+    </mat-toolbar>
   `,
-  styleUrls: ['./wrapper.component.css'],
+  styleUrls: ['./the-header.component.css'], // Reference to your CSS file
 })
-export class WrapperComponent {}
+export class TheHeaderComponent {
+  overlayWidth = '0%';
+
+  openNav() {
+    this.overlayWidth = '100%';
+  }
+
+  closeNav() {
+    this.overlayWidth = '0%';
+  }
+}
