@@ -35,9 +35,9 @@ import { RouterModule } from '@angular/router';
             (click)="closeNav()"
             >Home</a
           >
-          <!-- <a mat-button class="menu-item" routerLink="/about"
+          <a mat-button class="menu-item" routerLink="/about"
             ><h6 class="text" (click)="closeNav()">About</h6></a
-          > -->
+          >
           <a mat-button class="menu-item" routerLink="/foundation"
             ><h6 class="text" (click)="closeNav()">Foundation</h6></a
           >
@@ -55,9 +55,9 @@ import { RouterModule } from '@angular/router';
       </div>
       <div class="text">
         <a mat-button class="menu-item" routerLink="/home">Home</a>
-        <!-- <a mat-button class="menu-item" routerLink="/about"
+        <a mat-button class="menu-item" routerLink="/about"
           ><h6 class="text">About</h6></a
-        > -->
+        >
         <a mat-button class="menu-item" routerLink="/foundation"
           ><h6 class="text">Foundation</h6></a
         >
