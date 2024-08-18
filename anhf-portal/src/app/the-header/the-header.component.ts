@@ -28,10 +28,25 @@ import { RouterModule } from '@angular/router';
           >&times;</a
         >
         <div class="overlay-content">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <a
+            mat-button
+            class="menu-item"
+            routerLink="/home"
+            (click)="closeNav()"
+            >Home</a
+          >
+          <!-- <a mat-button class="menu-item" routerLink="/about"
+            ><h6 class="text" (click)="closeNav()">About</h6></a
+          > -->
+          <a mat-button class="menu-item" routerLink="/foundation"
+            ><h6 class="text" (click)="closeNav()">Foundation</h6></a
+          >
+          <a mat-button class="menu-item" routerLink="/news"
+            ><h6 class="text" (click)="closeNav()">News</h6></a
+          >
+          <a mat-button class="menu-item" routerLink="/contact"
+            ><h6 class="text" (click)="closeNav()">Contact</h6></a
+          >
         </div>
       </div>
 
@@ -40,11 +55,11 @@ import { RouterModule } from '@angular/router';
       </div>
       <div class="text">
         <a mat-button class="menu-item" routerLink="/home">Home</a>
-        <a mat-button class="menu-item" routerLink="/about"
+        <!-- <a mat-button class="menu-item" routerLink="/about"
           ><h6 class="text">About</h6></a
-        >
+        > -->
         <a mat-button class="menu-item" routerLink="/foundation"
-          ><h6 class="text">foundation</h6></a
+          ><h6 class="text">Foundation</h6></a
         >
         <a mat-button class="menu-item" routerLink="/news"
           ><h6 class="text">News</h6></a

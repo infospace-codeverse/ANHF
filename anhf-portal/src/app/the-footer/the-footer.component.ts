@@ -16,13 +16,13 @@ import { Component, OnInit } from '@angular/core';
             />
             <span
               class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-sky-800 z-20"
-              >Alafayo Nelson <br> Hope Foundation</span
+              >Alafayo Nelson <br />
+              Hope Foundation</span
             >
           </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-           
             <ul class="text-gray-400">
               <li class="mb-4">
                 <a
@@ -41,7 +41,6 @@ import { Component, OnInit } from '@angular/core';
             </ul>
           </div>
           <div>
-           
             <ul class="text-gray-400">
               <li class="mb-4">
                 <a
@@ -60,21 +59,12 @@ import { Component, OnInit } from '@angular/core';
             </ul>
           </div>
           <div>
-            
             <ul class="text-gray-400">
               <li class="mb-4 list-none">
                 <a class="">
-                  +254 722 575 169 <br />
-                  +254 720 422 945<br />
-                  +254 710 441 741<br />
+                  +254743-327-286<br />
+                  +254714-867-986
                 </a>
-              </li>
-              <li>
-                <a
-                  href="http://localhost:4200/contact"
-                  class="hover:text-blue-400 hover:underline"
-                  >Info.com</a
-                >
               </li>
             </ul>
           </div>
@@ -83,9 +73,9 @@ import { Component, OnInit } from '@angular/core';
       <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-evenly">
         <span class="text-sm text-gray-400 sm:text-center"
-          >© 2023
+          >© 2024
           <a routerLink="/" class="hover:underline hover:text-blue-400"
-            >Lish AI Labs™</a
+            >Alfayo Nelson Hope Foundation™</a
           >. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
