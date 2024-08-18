@@ -4,11 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-foundation',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      foundation works!
-    </p>
-  `,
+  templateUrl: '../../app/the-foundation/the-foundation.component.html',
   styleUrl: './foundation.component.css'
 })
 export class FoundationComponent {
