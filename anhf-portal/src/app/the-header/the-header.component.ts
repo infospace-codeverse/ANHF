@@ -70,7 +70,7 @@ import { RouterModule } from '@angular/router';
       </div>
       <div class="grid grid-cols-2 gap-1">
         <button
-          class="bg-orange-500 text-white text-sm py-3 px-5 rounded-lg"
+          class="border border-[#00afef;] text-[#00afef;] text-sm py-3 px-5 rounded-lg"
           aria-label="Example icon-button with admin settings icon"
           routerLink="portal/dashboard"
         >

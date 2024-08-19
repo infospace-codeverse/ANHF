@@ -37,18 +37,18 @@ import { RouterModule } from '@angular/router';
         >
           <div class="lg:grid grid-cols-3 flex flex-col">
             <div class="col-span-1">
-              <p class="text-5xl font-light">1000 +</p>
+              <p class="text-5xl text-orange-500 font-light">1000 +</p>
               <p class="text-xl font-light">
                 children benefited from scholarships in school fee
               </p>
             </div>
 
             <div class="col-span-1">
-              <p class="text-5xl font-light">2 +</p>
+              <p class="text-5xl text-[#00afef;] font-light">2 +</p>
               <p class="text-xl font-light">Years in operation</p>
             </div>
             <div class="col-span-1">
-              <p class="text-5xl font-light">200 +</p>
+              <p class="text-5xl text-red-500 font-light">200 +</p>
               <p class="text-xl font-light">
                 Groups have benefited in help and savings
               </p>
