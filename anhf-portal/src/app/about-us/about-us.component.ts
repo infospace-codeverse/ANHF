@@ -38,7 +38,9 @@ import { Component } from '@angular/core';
           </button>
         </div>
       </div>
-      <p class="col-span-3 md:text-2xl font-light max-md:text-center md:pl-10 pt-14">
+      <p
+        class="col-span-3 md:text-2xl font-light max-md:text-center md:pl-10 pt-14"
+      >
         As the Chairperson of Alfayo Nelson Hope Foundation, it is both an honor
         and a privilege to share with you the vision and mission that drive our
         work in Nyali Constituency. Our organization was founded with a singular

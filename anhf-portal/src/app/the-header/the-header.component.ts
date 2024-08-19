@@ -21,7 +21,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
   ],
   template: `
-    <mat-toolbar class="nav-bar">
+    <mat-toolbar class="nav-bar border">
       <span class="open-icon" (click)="openNav()">&#9776;</span>
       <div id="myNav" class="overlay" [ngStyle]="{ width: overlayWidth }">
         <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
@@ -68,16 +68,20 @@ import { RouterModule } from '@angular/router';
           ><h6 class="text">Contact</h6></a
         >
       </div>
-      <div>
+      <div class="grid grid-cols-2 gap-1">
         <button
-          mat-icon-button
-          class="example-icon"
+          class="bg-orange-500 text-white text-sm py-3 px-5 rounded-lg"
           aria-label="Example icon-button with admin settings icon"
           routerLink="portal/dashboard"
         >
-          <a mat-button class="menu-item" routerLink="portal/dashboard"
-            ><h6 class="text" style="color:white">Portal</h6></a
-          >
+          Portal
+        </button>
+        <button
+          class="bg-[#00afef;] text-white text-sm py-2 px-4 rounded-lg"
+          aria-label="Example icon-button with admin settings icon"
+          routerLink="portal/dashboard"
+        >
+          Donate
         </button>
       </div>
     </mat-toolbar>

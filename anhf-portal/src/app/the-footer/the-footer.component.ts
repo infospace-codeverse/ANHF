@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <footer class="bg-gray-50 p-4 sm:p-6">
+    <footer class="bg-gray-50 p-4 sm:p-6 border">
       <div class="md:flex md:justify-evenly">
         <div class="mb-6 md:mb-0 flex flex-start">
           <a href="/" class="flex items-center">
