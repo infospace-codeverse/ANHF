@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #00afef;
+  /* background-color: #00afef; */
 }
 
 .logo {
@@ -14,7 +14,7 @@
 .text .menu-item {
   margin: 0 10px;
   font-size: large;
-  color: azure;
+  color: black;
 }
 
 .admin-icon-container {
@@ -25,7 +25,7 @@
 
 .example-icon {
   margin-right: 8px;
-  color: azure;
+  color: black;
 }
 
 @media (max-width: 600px) {

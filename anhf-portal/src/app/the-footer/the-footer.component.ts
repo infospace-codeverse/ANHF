@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <footer class="bg-gray-800 p-4 sm:p-6">
+    <footer class="bg-gray-50 p-4 sm:p-6">
       <div class="md:flex md:justify-evenly">
         <div class="mb-6 md:mb-0 flex flex-start">
           <a href="/" class="flex items-center">
@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
               alt="Lish Labs Ai"
             />
             <span
-              class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-sky-800 z-20"
+              class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-300 z-20"
               >Alafayo Nelson <br />
               Hope Foundation</span
             >
@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <ul class="text-gray-400">
+            <ul class="text-gray-700">
               <li class="mb-4">
                 <a
                   href="http://localhost:4200/training/"
@@ -41,7 +41,7 @@ import { Component, OnInit } from '@angular/core';
             </ul>
           </div>
           <div>
-            <ul class="text-gray-400">
+            <ul class="text-gray-700">
               <li class="mb-4">
                 <a
                   href="https://Facebook.com"
@@ -59,7 +59,7 @@ import { Component, OnInit } from '@angular/core';
             </ul>
           </div>
           <div>
-            <ul class="text-gray-400">
+            <ul class="text-gray-700">
               <li class="mb-4 list-none">
                 <a class="">
                   +254743-327-286<br />
@@ -70,9 +70,9 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
       </div>
-      <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+      <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-evenly">
-        <span class="text-sm text-gray-400 sm:text-center"
+        <span class="text-sm text-gray-600 sm:text-center"
           >© 2024
           <a routerLink="/" class="hover:underline hover:text-blue-400"
             >Alfayo Nelson Hope Foundation™</a

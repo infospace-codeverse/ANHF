@@ -21,11 +21,24 @@ import { Component } from '@angular/core';
         </div>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto md:grid grid-cols-3 flex flex-col py-20">
-      <p class="col-span-1 text-2xl md:text-5xl max-md:text-center">
-        A Message From Our Founder
-      </p>
-      <p class="col-span-2 md:text-lg max-md:text-center">
+    <div class="max-w-7xl mx-auto md:grid grid-cols-5 flex flex-col py-20">
+      <div class="col-span-2 px-4">
+        <p class="text-2xl md:text-3xl max-md:text-center">
+          A Message From Our Founder
+        </p>
+        <div
+          class="max-w-7xl md:rounded-xl md:mx-auto h-40 md:h-[200px] bg-cover flex flex-col items-center justify-center text-center"
+          style="background-image: url('../../assets/video.png')"
+        >
+          <button
+            (click)="openVideo()"
+            class="bg-orange-500 h-20 text-3xl rounded-full w-20"
+          >
+            &#9658;
+          </button>
+        </div>
+      </div>
+      <p class="col-span-3 md:text-2xl font-light max-md:text-center md:pl-10 pt-14">
         As the Chairperson of Alfayo Nelson Hope Foundation, it is both an honor
         and a privilege to share with you the vision and mission that drive our
         work in Nyali Constituency. Our organization was founded with a singular
@@ -34,22 +47,12 @@ import { Component } from '@angular/core';
         and persons with disabilities.
       </p>
     </div>
-    <div
-      class="max-w-7xl md:m-4 md:rounded-xl md:mx-auto h-40 md:h-[300px] bg-cover flex flex-col items-center justify-center text-center"
-      style="background-image: url('../../assets/video.png')"
-    >
-      <button
-        (click)="openVideo()"
-        class="bg-orange-500 h-20 text-3xl rounded-full w-20"
-      >
-        &#9658;
-      </button>
-    </div>
-    <div class="bg-blue-100 p-20 mt-20">
+
+    <div class="bg-blue-100 md:p-20 p-4 max-md:text-center">
       <div class="md:grid grid-cols-2 flex flex-col py-10 max-w-7xl mx-auto">
         <div>
           <p
-            class="col-span-1 text-2xl md:text-4xl font-light max-md:text-center"
+            class="col-span-1 text-xl md:text-4xl font-light max-md:text-center"
           >
             <span class="text-7xl text-blue-300">❝<br /></span> We believe that
             sustainable development is not just a concept but a commitment. A
@@ -94,94 +97,175 @@ import { Component } from '@angular/core';
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-3 max-w-7xl mx-auto">
-      <div class="grid grid-cols-2">
+    <div
+      class="md:grid grid-cols-3 max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 p-5 lg:py-20"
+    >
+      <p class="text-center text-5xl text-[#00afef] font-light">
+        Our core values
+      </p>
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center">
-          <img src="../../assets/empower.png" class="h-16" />
+          <img src="../../assets/empower.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Community Empowerment</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Community Empowerment</p>
+          <p class=" font-light text-xl">
             We empower individuals and families to build selfreliance and
             achieve a better quality of life through supportive and inclusive
             programs.
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center ">
-          <img src="../../assets/sustainability.png" class="h-16" />
+          <img src="../../assets/sustainability.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Sustainability</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Sustainability</p>
+          <p class=" font-light text-xl">
             We prioritize sustainable practices in all our initiatives, ensuring
             long-term positive impact on the environment and community
             wellbeing.
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center ">
-          <img src="../../assets/inclusive.png" class="h-16" />
+          <img src="../../assets/inclusive.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Inclusivity</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Inclusivity</p>
+          <p class=" font-light text-xl">
             We are dedicated to fostering an environment where all community
             members, regardless of their background or abilities, are valued and
             have equal opportunities.
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center ">
-          <img src="../../assets/transparency.png" class="h-16" />
+          <img src="../../assets/transparency.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Transparency and Accountability</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Transparency and Accountability</p>
+          <p class=" font-light text-xl">
             We maintain transparency and accountability in all our operations,
             building trust with the community, partners, and supporters.
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center ">
-          <img src="../../assets/collaboration.png" class="h-16" />
+          <img src="../../assets/collaboration.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Collaboration and Partnership</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Collaboration and Partnership</p>
+          <p class=" font-light text-xl">
             We believe in the power of collaboration and actively seek
             partnerships to enhance our effectiveness and extend our reach.
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center ">
-          <img src="../../assets/community-work.png" class="h-16" />
+          <img src="../../assets/community-work.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Volunteerism and Service</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Volunteerism and Service</p>
+          <p class=" font-light text-xl">
             We value the spirit of volunteerism and service, believing that
             positive change is driven by collective efforts and a shared
             commitment to the greater good.
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-4">
         <div class="col-span-1 flex justify-center ">
-          <img src="../../assets/innovation.png" class="h-16" />
+          <img src="../../assets/innovation.png" class="h-14" />
         </div>
-        <div class="col-span-1">
-          <p>Innovation and Adaptability</p>
-          <p>
+        <div class="col-span-3">
+          <p class="text-2xl">Innovation and Adaptability</p>
+          <p class=" font-light text-xl">
             We embrace innovation and remain adaptable in our approaches,
             continuously seeking new ways to address the evolving needs of our
             community.
           </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-orange-100 py-20">
+      <div class="max-w-xl mx-auto text-center">
+        <p class="text-4xl">Our Leadership</p>
+        <p class=" font-light text-xl">
+          We empower individuals and families to build selfreliance and achieve
+          a better quality of life through supportive and inclusive programs.
+        </p>
+      </div>
+      <div
+        class="md:grid grid-cols-3 max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 p-5 lg:py-20"
+      >
+        <div class="">
+          <div class="col-span-1 flex justify-center ">
+            <img
+              src="../../assets/Alfayo-nelson.jpg"
+              class="h-56 rounded-full"
+            />
+          </div>
+          <div class="text-center">
+            <p class="text-2xl">Alfayo Nelson</p>
+            <p class=" font-light text-xl">Founder and Patron</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="col-span-1 flex justify-center ">
+            <img
+              src="../../assets/benson-imoli.jpg"
+              class="h-56 rounded-full"
+            />
+          </div>
+          <div class="text-center">
+            <p class="text-2xl">Benson Imoli</p>
+            <p class=" font-light text-xl">Team Leader / CEO</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="col-span-1 flex justify-center ">
+            <img src="../../assets/arnold-baya.jpg" class="h-56 rounded-full" />
+          </div>
+          <div class="text-center">
+            <p class="text-2xl">Anorld Baya</p>
+            <p class=" font-light text-xl">Programs Director</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="col-span-1 flex justify-center ">
+            <img src="../../assets/Otanta.jpg" class="h-56 rounded-full" />
+          </div>
+          <div class="text-center">
+            <p class="text-2xl">Alfani Otanta</p>
+            <p class=" font-light text-xl">Head of Protocol</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="col-span-1 flex justify-center ">
+            <img
+              src="../../assets/justin-katana.jpg"
+              class="h-56 rounded-full"
+            />
+          </div>
+          <div class="text-center">
+            <p class="text-2xl">Justine Katana</p>
+            <p class=" font-light text-xl">Oversight Management and Control</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="col-span-1 flex justify-center ">
+            <img src="../../assets/dan-ngure.jpg" class="h-56 rounded-full" />
+          </div>
+          <div class="text-center">
+            <p class="text-2xl">Dan Ngure</p>
+            <p class=" font-light text-xl">Secretariat</p>
+          </div>
         </div>
       </div>
     </div>
