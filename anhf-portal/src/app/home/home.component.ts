@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
               Alfayo Nelson Hope foundation
             </p>
             <p class="text-white text-xl lg:text-2xl max-w-4xl font-light">
-              making a change in coastal communities, founded with a vision to
+              Making a change in coastal communities, founded with a vision to
               nurture and empower
             </p>
             <button
@@ -39,10 +39,9 @@ import { RouterModule } from '@angular/router';
             <div class="col-span-1">
               <p class="text-5xl text-orange-500 font-light">1000 +</p>
               <p class="text-xl font-light">
-                children benefited from scholarships in school fee
+                Children benefited from scholarships in school fee
               </p>
             </div>
-
             <div class="col-span-1">
               <p class="text-5xl text-[#00afef;] font-light">2 +</p>
               <p class="text-xl font-light">Years in operation</p>

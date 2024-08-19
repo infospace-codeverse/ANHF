@@ -70,14 +70,14 @@ import { RouterModule } from '@angular/router';
       </div>
       <div class="grid grid-cols-2 gap-1">
         <button
-          class="border border-[#00afef;] text-[#00afef;] text-sm py-3 px-5 rounded-lg"
+          class="border border-[#00afef;] text-[#00afef;] text-sm py-3 px-5 rounded-lg hover:border-orange-500 hover:text-orange-500"
           aria-label="Example icon-button with admin settings icon"
           routerLink="portal/dashboard"
         >
           Portal
         </button>
         <button
-          class="bg-[#00afef;] text-white text-sm py-2 px-4 rounded-lg"
+          class="bg-[#00afef;] text-white text-sm py-2 px-4 rounded-lg hover:bg-orange-500"
           aria-label="Example icon-button with admin settings icon"
           routerLink="portal/dashboard"
         >
