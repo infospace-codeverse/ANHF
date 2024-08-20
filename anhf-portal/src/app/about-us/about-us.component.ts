@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div
-      class="max-w-7xl md:m-4 md:rounded-xl md:mx-auto h-[450px] bg-cover flex flex-col items-center justify-center text-center"
+      class="max-w-7xl mt-20 md:m-4 md:rounded-xl md:mx-auto h-[450px] bg-cover flex flex-col items-center justify-center text-center"
       style="background-image: url('../../assets/back.jpg')"
     >
       <div

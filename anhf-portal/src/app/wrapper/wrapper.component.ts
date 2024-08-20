@@ -50,7 +50,7 @@ import { TheHeaderComponent } from '../the-header/the-header.component';
         </button>
       </div>
     </mat-toolbar> -->
-    <app-the-header></app-the-header>
+    <app-the-header class="top-0 fixed w-full z-10 "></app-the-header>
     <router-outlet></router-outlet>
     <app-the-footer></app-the-footer>
   `,

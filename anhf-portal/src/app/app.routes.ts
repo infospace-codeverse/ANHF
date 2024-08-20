@@ -17,6 +17,7 @@ import { MemberComponent } from './member/member.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GroupComponent } from './group/group.component';
 import { BeneficiaryComponent } from './beneficiary/beneficiary.component';
+import { DonateComponent } from './donate/donate.component';
 
 export const routes: Routes = [
   { path: 'not-found', component: ErrorPageComponent },
@@ -31,6 +32,7 @@ export const routes: Routes = [
       { path: 'foundation', component: FoundationComponent },
       { path: 'news', component: NewsComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'donate', component: DonateComponent },
     ],
   },
   {

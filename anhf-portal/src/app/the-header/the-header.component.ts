@@ -79,7 +79,7 @@ import { RouterModule } from '@angular/router';
         <button
           class="bg-[#00afef;] text-white text-sm py-2 px-4 rounded-lg hover:bg-orange-500"
           aria-label="Example icon-button with admin settings icon"
-          routerLink="portal/dashboard"
+          routerLink="donate"
         >
           Donate
         </button>

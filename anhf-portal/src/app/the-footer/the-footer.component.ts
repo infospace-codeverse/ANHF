@@ -15,8 +15,8 @@ import { Component, OnInit } from '@angular/core';
               alt="Lish Labs Ai"
             />
             <span
-              class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-300 z-20"
-              >Alafayo Nelson <br />
+              class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-300 "
+              >Alfayo Nelson <br />
               Hope Foundation</span
             >
           </a>
@@ -62,8 +62,8 @@ import { Component, OnInit } from '@angular/core';
             <ul class="text-gray-700">
               <li class="mb-4 list-none">
                 <a class="">
-                  +254743-327-286<br />
-                  +254714-867-986
+                  +254-743327286<br />
+                  +254-714867986
                 </a>
               </li>
             </ul>

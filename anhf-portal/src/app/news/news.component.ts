@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="hero">
+    <div class="hero mt-20">
       <div class="hero-background">
         <img src="../../assets/heron.jpg" alt="Hero background" />
       </div>
