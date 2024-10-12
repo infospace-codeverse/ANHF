@@ -96,7 +96,7 @@ import { RouterModule } from '@angular/router';
                   prosperous lives
                 </p>
                 <button
-                  routerLink="/about"
+                  routerLink="/education-initiative"
                   class="bg-white text-black text-sm font-medium px-10 py-3 rounded-3xl shadow-md"
                 >
                   Learn more
@@ -159,6 +159,12 @@ import { RouterModule } from '@angular/router';
                     health systems are necessary to meet health-related
                     Millennium Development Goals (MDGs).
                   </p>
+                  <button
+                    routerLink="/health-initiative"
+                    class="bg-white text-black text-sm font-medium px-10 py-3 rounded-3xl shadow-md"
+                  >
+                    Learn more
+                  </button>
                 </div>
               </div>
             </div>
@@ -197,6 +203,12 @@ import { RouterModule } from '@angular/router';
                     that seeks to enhance local economies and enhance the
                     welfare of communities.
                   </p>
+                  <button
+                    routerLink="/ced-initiative"
+                    class="bg-white text-black text-sm font-medium px-10 py-3 rounded-3xl shadow-md"
+                  >
+                    Learn more
+                  </button>
                 </div>
               </div>
             </div>
@@ -244,6 +256,12 @@ import { RouterModule } from '@angular/router';
                     welfare of communities. Initiatives and plans are guided by
                     a community's social, environmental, and economic concerns.
                   </p>
+                  <button
+                    routerLink="/security-initiative"
+                    class="bg-white text-black text-sm font-medium px-10 py-3 rounded-3xl shadow-md"
+                  >
+                    Learn more
+                  </button>
                 </div>
               </div>
             </div>
