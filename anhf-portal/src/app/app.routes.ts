@@ -8,6 +8,10 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { PortalComponent } from './portal/portal.component';
+import { SecurityInitiativeComponent } from './security-initiative/security-initiative.component';
+import { CEDInitiativeComponent } from './ced-initiative/ced-initiative.component';
+import { HealthInitiativeComponent } from './health-initiative/health-initiative.component';
+import { EducationInitiativeComponent } from './education-initiative/education-initiative.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 import { AuthGuard } from './auth/auth.guard';
@@ -33,6 +37,10 @@ export const routes: Routes = [
       { path: 'news', component: NewsComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'donate', component: DonateComponent },
+      { path: 'education-initiative', component: EducationInitiativeComponent },
+      { path: 'ced-initiative', component: CEDInitiativeComponent },
+      { path: 'health-initiative', component: HealthInitiativeComponent },
+      { path: 'security-initiative', component: SecurityInitiativeComponent },
     ],
   },
   {

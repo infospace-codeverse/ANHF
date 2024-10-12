@@ -190,7 +190,7 @@ import { RouterModule } from '@angular/router';
               >
                 <div class="max-w-5xl md:px-10 px-1 py-10">
                   <p class="text-white text-4xl lg:text-xl max-w-4xl uppercase">
-                    COMMUNITY / ECONOMIC DEVELOPMENT
+                    COMMUNITY DEVELOPMENT
                   </p>
                   <p class="text-white text-lg max-w-4xl font-light">
                     Community economic development (CED) is a holistic strategy

@@ -95,7 +95,7 @@ import { Component } from '@angular/core';
           </p>
         </div>
         <div class="flex justify-center items-center">
-          <img src="../../assets/nelsonkids.png" class="h-[350px]" />
+          <img src="../../assets/nelsonkids.png" class="lg:h-[350px] " />
         </div>
       </div>
     </div>
@@ -262,7 +262,7 @@ import { Component } from '@angular/core';
         </div>
         <div class="">
           <div class="col-span-1 flex justify-center ">
-            <img src="../../assets/dan-ngure.jpg" class="h-56 rounded-full" />
+            <img src="../../assets/Dan.jpg" class="h-56 rounded-full" />
           </div>
           <div class="text-center">
             <p class="text-2xl">Dan Ngure</p>

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <footer class="bg-gray-50 p-4 sm:p-6 border">
+    <footer class="bg-[#00afef;] p-4 sm:p-6">
       <div class="md:flex md:justify-evenly">
         <div class="mb-6 md:mb-0 flex flex-start">
           <a href="/" class="flex items-center">
@@ -15,15 +15,15 @@ import { Component, OnInit } from '@angular/core';
               alt="Lish Labs Ai"
             />
             <span
-              class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-300 "
+              class="self-center text-2xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-sky-200 "
               >Alfayo Nelson <br />
               Hope Foundation</span
             >
           </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-          <div>
-            <ul class="text-gray-700">
+          <!-- <div>
+            <ul class="text-gray-100">
               <li class="mb-4">
                 <a
                   href="http://localhost:4200/training/"
@@ -39,19 +39,19 @@ import { Component, OnInit } from '@angular/core';
                 >
               </li>
             </ul>
-          </div>
+          </div> -->
           <div>
-            <ul class="text-gray-700">
+            <ul class="text-gray-100">
               <li class="mb-4">
                 <a
-                  href="https://Facebook.com"
+                  href="https://www.facebook.com/EAGLESTIM.VENTURES "
                   class="hover:underline hover:text-blue-400"
                   >Facebook</a
                 >
               </li>
               <li>
                 <a
-                  href="https://www.youtube.com/@LishAICenter"
+                  href="https://www.youtube.com/@nelsonalfayo2221"
                   class="hover:underline hover:text-blue-400"
                   >YouTube</a
                 >
@@ -59,11 +59,11 @@ import { Component, OnInit } from '@angular/core';
             </ul>
           </div>
           <div>
-            <ul class="text-gray-700">
+            <ul class="text-gray-100">
               <li class="mb-4 list-none">
                 <a class="">
                   +254-743327286<br />
-                  +254-714867986
+                  +254-740040248
                 </a>
               </li>
             </ul>
@@ -72,14 +72,17 @@ import { Component, OnInit } from '@angular/core';
       </div>
       <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-evenly">
-        <span class="text-sm text-gray-600 sm:text-center"
+        <span class="text-sm text-gray-100 sm:text-center"
           >© 2024
           <a routerLink="/" class="hover:underline hover:text-blue-400"
             >Alfayo Nelson Hope Foundation™</a
-          >. All Rights Reserved.
+          >All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-          <a href="Facebook.com" class="text-gray-500 hover:text-white">
+          <a
+            href="https://www.facebook.com/EAGLESTIM.VENTURES "
+            class="text-gray-100 hover:text-white"
+          >
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -94,7 +97,7 @@ import { Component, OnInit } from '@angular/core';
             </svg>
             <span class="sr-only">Facebook page</span>
           </a>
-          <a (click)="openLink()" class="text-gray-500 hover:text-white">
+          <a (click)="openLink()" class="text-gray-100 hover:text-white">
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -107,7 +110,7 @@ import { Component, OnInit } from '@angular/core';
             </svg>
             <span class="sr-only">Twitter page</span>
           </a>
-          <a (click)="openInst()" class="text-gray-500 hover:text-white">
+          <!-- <a (click)="openInst()" class="text-gray-100 hover:text-white">
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -120,10 +123,9 @@ import { Component, OnInit } from '@angular/core';
                 clip-rule="evenodd"
               />
             </svg>
-
-            <span class="sr-only">Instagram </span>
-          </a>
-          <a (click)="openYtb()" class="text-gray-500 hover:text-white">
+            <span class="sr-only">Facebook</span>
+          </a> -->
+          <a (click)="openYtb()" class="text-gray-100 hover:text-white">
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -138,40 +140,6 @@ import { Component, OnInit } from '@angular/core';
             </svg>
             <span class="sr-only">YouTube</span>
           </a>
-          <a href="#" class="text-gray-500 hover:text-white">
-            <svg
-              class="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M12 2A10 10 0 1 0 12 22A10 10 0 1 0 12 2Z"
-                opacity=".3"
-              ></path>
-              <path
-                d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <span class="sr-only">Git Hub</span>
-          </a>
-          <a (click)="openLinked()" class="text-gray-500 hover:text-white">
-            <svg
-              class="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M7.738,17L7.738,17 c-0.697,0-1.262-0.565-1.262-1.262v-4.477C6.477,10.565,7.042,10,7.738,10h0C8.435,10,9,10.565,9,11.262v4.477 C9,16.435,8.435,17,7.738,17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2 S8.551,8.717,7.694,8.717z M16.779,17L16.779,17c-0.674,0-1.221-0.547-1.221-1.221v-2.605c0-1.058-0.651-1.174-0.895-1.174 s-1.058,0.035-1.058,1.174v2.605c0,0.674-0.547,1.221-1.221,1.221h-0.081c-0.674,0-1.221-0.547-1.221-1.221v-4.517 c0-0.697,0.565-1.262,1.262-1.262h0c0.697,0,1.262,0.565,1.262,1.262c0,0,0.282-1.262,2.198-1.262C17.023,10,18,10.977,18,13.174 v2.605C18,16.453,17.453,17,16.779,17z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <span class="sr-only">linkedIn</span>
-          </a>
         </div>
       </div>
     </footer>
@@ -182,18 +150,12 @@ export class TheFooterComponent implements OnInit {
   ngOnInit(): void {}
 
   openLink() {
-    window.open('https://twitter.com/LishLimited');
+    window.open('https://x.com/anhfoundation');
   }
   openInst() {
-    window.open('https://Instagram.com/lish_ai_labs/');
+    window.open('https://www.facebook.com/EAGLESTIM.VENTURES ');
   }
   openYtb() {
-    window.open('https://www.youtube.com/@LishAICenter/videos');
-  }
-  openGit() {
-    window.open('');
-  }
-  openLinked() {
-    window.open('https://www.linkedin.com/company/lish-ai-labs/');
+    window.open('https://www.youtube.com/@nelsonalfayo2221');
   }
 }

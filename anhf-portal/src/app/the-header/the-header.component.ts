@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-the-header',
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
   ],
   template: `
     <mat-toolbar class="nav-bar border">
@@ -41,6 +43,41 @@ import { RouterModule } from '@angular/router';
           <a mat-button class="menu-item" routerLink="/foundation"
             ><h6 class="text" (click)="closeNav()">Foundation</h6></a
           >
+          <a mat-button class="menu-item">
+            <button mat-button [matMenuTriggerFor]="menu">
+              <h6 class="text text-gray-400">initiatives</h6>
+            </button>
+            <mat-menu #menu="matMenu" class="bg-white">
+              <button
+                mat-menu-item
+                (click)="closeNav()"
+                routerLink="/education-initiative"
+              >
+                Eduaction
+              </button>
+              <button
+                mat-menu-item
+                (click)="closeNav()"
+                routerLink="/ced-initiative"
+              >
+                Community Economic Development
+              </button>
+              <button
+                mat-menu-item
+                (click)="closeNav()"
+                routerLink="/health-initiative"
+              >
+                Health Care
+              </button>
+              <button
+                mat-menu-item
+                (click)="closeNav()"
+                routerLink="/security-initiative"
+              >
+                Security
+              </button>
+            </mat-menu></a
+          >
           <a mat-button class="menu-item" routerLink="/news"
             ><h6 class="text" (click)="closeNav()">News</h6></a
           >
@@ -58,8 +95,16 @@ import { RouterModule } from '@angular/router';
         <a mat-button class="menu-item" routerLink="/about"
           ><h6 class="text">About</h6></a
         >
-        <a mat-button class="menu-item" routerLink="/foundation"
-          ><h6 class="text">Foundation</h6></a
+        <a mat-button class="menu-item">
+          <button mat-button [matMenuTriggerFor]="menu">
+            <h6 class="text">Initiatives</h6>
+          </button>
+          <mat-menu #menu="matMenu" class="bg-white">
+            <button mat-menu-item>Eduaction</button>
+            <button mat-menu-item>Community Economic Development</button>
+            <button mat-menu-item>Health Care</button>
+            <button mat-menu-item>Security</button>
+          </mat-menu></a
         >
         <a mat-button class="menu-item" routerLink="/news"
           ><h6 class="text">News</h6></a
