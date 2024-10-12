@@ -11,13 +11,18 @@ import { Component } from '@angular/core';
       style="background-image: url('../../assets/health.jpg')"
     >
       <div
-        class="bg-black p-2 md:rounded-xl bg-opacity-80 w-full h-full flex flex-col items-center justify-center"
+        class="bg-blue-950 p-2 md:rounded-xl bg-opacity-80 w-full h-full flex flex-col items-center justify-center"
       >
-        <div class="max-w-xl">
+        <div class="max-w-3xl">
           <p class="text-white text-3xl lg:text-5xl mb-4">Health Care</p>
           <p class="text-white text-xl lg:text-xl mb-4">
-            Alfayo Nelson Hope Foundation making a change in coastal
-            communities, founded with a vision to nurture and empower.
+            At the Alfayo Nelson Hope Foundation (ANHF), we are dedicated to
+            enhancing the health and well-being of the communities we serve. Our
+            health projects focus on both preventive and supportive care,
+            addressing critical health challenges in Nyali Constituency and
+            surrounding areas. Through our efforts, we aim to create a
+            healthier, more resilient community capable of sustaining its
+            wellbeing.
           </p>
         </div>
       </div>
