@@ -196,11 +196,15 @@ import { Component } from '@angular/core';
       </div>
     </div>
     <div class="bg-orange-100 py-20">
-      <div class="max-w-xl mx-auto text-center">
+      <div class="max-w-5xl mx-auto text-center">
         <p class="text-4xl">Our Leadership</p>
-        <p class=" font-light text-xl">
-          We empower individuals and families to build selfreliance and achieve
-          a better quality of life through supportive and inclusive programs.
+        <p class="font-light text-xl">
+          At the core of the Alfayo Nelson Hope Foundation is a committed
+          leadership team, driven by a shared vision of empowering communities
+          and uplifting the vulnerable. With diverse expertise and a passion for
+          making a real difference, each member plays a vital role in advancing
+          our mission. Together, they steer the foundation toward impactful,
+          sustainable change for a brighter future.<br />
         </p>
       </div>
       <div
@@ -266,7 +270,7 @@ import { Component } from '@angular/core';
           </div>
           <div class="text-center">
             <p class="text-2xl">Dan Ngure</p>
-            <p class=" font-light text-xl">Secretariat</p>
+            <p class=" font-light text-xl">Executive Assistant</p>
           </div>
         </div>
       </div>
