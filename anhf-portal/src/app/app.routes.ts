@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FoundationComponent } from './foundation/foundation.component';
 import { NewsComponent } from './news/news.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoginComponent } from './login/login.component';
 import { PortalComponent } from './portal/portal.component';
 import { SecurityInitiativeComponent } from './security-initiative/security-initiative.component';
@@ -35,7 +35,7 @@ export const routes: Routes = [
       { path: 'about', component: AboutUsComponent },
       { path: 'foundation', component: FoundationComponent },
       { path: 'news', component: NewsComponent },
-      { path: 'contact', component: ContactComponent },
+      { path: 'contact', component: ContactUsComponent },
       { path: 'donate', component: DonateComponent },
       { path: 'education-initiative', component: EducationInitiativeComponent },
       { path: 'ced-initiative', component: CEDInitiativeComponent },
