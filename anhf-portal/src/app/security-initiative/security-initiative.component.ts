@@ -59,7 +59,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Sec001.jpg" class="h-96" />
+          <img src="../../assets/Sec001.jpg" class=" h-64 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           ANHF has established strong partnerships with area chiefs, "mzee wa
@@ -81,7 +81,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Ced001.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Ced001.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           In addition to working with local authorities, ANHF has focused on
@@ -102,7 +102,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Ced002.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Ced002.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           To distract youth from engaging in criminal activities, ANHF has

@@ -62,7 +62,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Ced006.jpg" class="h-96" />
+          <img src="../../assets/Ced006.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           ANHF has been at the forefront of environmental activities, leading
@@ -82,7 +82,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Ced003.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Ced003.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           Understanding the needs of the most vulnerable, ANHF has been actively
@@ -104,7 +104,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Ced007.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Ced007.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           ANHF is dedicated to empowering youth, women, the elderly, and persons

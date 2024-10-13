@@ -40,12 +40,12 @@ import { MatMenuModule } from '@angular/material/menu';
           <a mat-button class="menu-item" routerLink="/about"
             ><h6 class="text" (click)="closeNav()">About</h6></a
           >
-          <a mat-button class="menu-item" routerLink="/foundation"
+          <!-- <a mat-button class="menu-item" routerLink="/foundation"
             ><h6 class="text" (click)="closeNav()">Foundation</h6></a
-          >
+          > -->
           <a mat-button class="menu-item">
             <button mat-button [matMenuTriggerFor]="menu">
-              <h6 class="text text-gray-400">initiatives</h6>
+              <h6 class="text text-gray-400">Initiatives</h6>
             </button>
             <mat-menu #menu="matMenu" class="bg-white">
               <button

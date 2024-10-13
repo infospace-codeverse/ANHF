@@ -84,7 +84,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Edu006.jpg" class="h-96" />
+          <img src="../../assets/Edu006.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           ANHF is proud to have sponsored over 1,000 students across various
@@ -106,7 +106,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Edu010.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Edu010.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           Recognizing the importance of holistic development, ANHF has also
@@ -124,7 +124,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Edu009.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Edu009.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           In today’s digital age, access to technology is crucial for
@@ -144,7 +144,7 @@ import { Component } from '@angular/core';
       </div>
       <div class="col-span-4 px-4">
         <div class="">
-          <img src="../../assets/Edu005.jpg" class="h-64 md:h-96" />
+          <img src="../../assets/Edu005.jpg" class="h-56 md:h-96" />
         </div>
         <p class="md:text-2xl font-light max-md:text-center">
           In collaboration with Budget Driving School, ANHF has funded driving

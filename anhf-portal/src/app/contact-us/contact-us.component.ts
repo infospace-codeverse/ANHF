@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
               >
                 <p class="text-5xl text-orange-600 font-light">E-mail Us</p>
                 <p class="text-2xl font-light break-words">
-                  Alfayonelsonhopefoundation&#64;gmail.com
+                  alfayonelsonhopefoundation01&#64;gmail.com
                 </p>
               </div>
             </div>
